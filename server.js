@@ -11,7 +11,7 @@ require("dotenv").config();
 
 const PORT = process.env.PORT || 3000;
 
-mongoose.connect("mongodb://localhost/authdb");
+mongoose.connect(process.env.DB_URL || "mongdb://localhost/authdb");
 
 app.use(
   session({
